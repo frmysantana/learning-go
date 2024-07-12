@@ -15,9 +15,9 @@ func main() {
 	fmt.Println("Hi there!")
 }
 
-/* 
+/*
 - to run a handful of files: `go run <file1> <file2> ...` - this compiles and runs the files
-- to compile: `go buiild <files>` - this compiles files
+- to compile: `go build <files>` - this compiles files
 - to run compiled files (they are executables): `./path/to/file/<filename>`
 - to auto-format all of the code: `go fmt`
 - to install packages:
