@@ -3,25 +3,14 @@ package main
 import "fmt"
 
 func main() {
-	// use keyword 'var' to declare a variable
-	// go is a statically-typed language, so after the name of the variable, you may want to write what the type of it's value is (not always needed)
-	// var card string = "Ace of Spades" // this is one way of declaring and initialzing a variable in the same line
-	// card := "Ace of Spades" // if you use the ':=' operator, go will infer the type of the variable from the right-hand side; effectively the same as declaration on line 8
-	// only use ':=' when declaring a new variable; reassignments just use '='
-	// variables cannot be ASSIGNED outside of a function body but they can be DECLARED WITHOUT ASSIGNMENT outside of a function body
-	card := newCard()
+	cards := []string{"Ace of Diamonds", newCard()}
+	cards = append(cards, "Six of Spades")
 
-	fmt.Println(card)
+	for i, card := range cards {
+		fmt.Println(i, card)
+	}
 }
 
-// func functionName() returnType {
-// body definition
-// return <value_of_type_returnType>
-// }
-// need to include the return type for a function
-// the return type is after the closing parenthesis
 func newCard() string {
 	return "Five of Diamonds"
 }
-
-// Files in the same package can freely call functions defined in other files without any sort of import statement
