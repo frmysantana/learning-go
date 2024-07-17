@@ -36,3 +36,7 @@ func functionName() returnType {
 	- range is a keyword that means to iterate over every member of a set
 	- every loop of a for loop discards the previous variabes, so the syntax requires a declaration as well as initialization, hence we use `:=`
 	- you must use every variable you declare in Go or it will not compile
+
+# OO Approach vs Go Approach
+- Go doesn't have classes
+- instead of classes, you define custom types made of the more basic types and "functions with a receiver" of that custom type (similar to methods on classes)
