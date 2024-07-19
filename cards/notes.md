@@ -40,3 +40,11 @@ func functionName() returnType {
 # OO Approach vs Go Approach
 - Go doesn't have classes
 - instead of classes, you define custom types made of the more basic types and "functions with a receiver" of that custom type (similar to methods on classes)
+
+# Receiver Functions
+- any function that has a reciever included in the declaration syntax:
+`func (<receiver_symbol> <receiver_type>) functionName()...`
+- doing this gives any variable of type `receiver_type` access to the `functionName` function though a dot syntax similar to using a method from a class
+- by convention, the `receiver_symbol` should be a 1 or 2 letter abbreviation of the `receiver_type` - technically you don't have to do this
+
+# Creating a New Deck
