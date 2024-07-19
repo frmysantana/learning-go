@@ -48,3 +48,4 @@ func functionName() returnType {
 - by convention, the `receiver_symbol` should be a 1 or 2 letter abbreviation of the `receiver_type` - technically you don't have to do this
 
 # Creating a New Deck
+- when go syntax requires making a variable that you aren't actually going to use, can use a `_` to tell go to ignore the fact that you aren't using that variable (e.g. for the index variable of a for loop)
