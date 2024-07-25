@@ -25,3 +25,14 @@ func (d deck) print() {
 		fmt.Println(i, card)
 	}
 }
+
+func deal(d deck, handSize int) (deck, deck) {
+	// if (handSize > len(d)) {
+	// throw an error
+	// }
+
+	hand := d[:handSize]
+	remainingDeck := d[handSize:]
+
+	return hand, remainingDeck
+}

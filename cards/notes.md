@@ -49,3 +49,18 @@ func functionName() returnType {
 
 # Creating a New Deck
 - when go syntax requires making a variable that you aren't actually going to use, can use a `_` to tell go to ignore the fact that you aren't using that variable (e.g. for the index variable of a for loop)
+
+# Slice Range Syntax
+- go has a slice syntax similar to python: <slice>[startIndexInclusive:endIndexNonInclusive]
+- if you leave of `startIndexInclusive`, go will start at 0
+- if you leave of `endIndexNonInclusive`, go will include the rest of the slice until the end
+
+# Multiple Return Values
+- use a type wrapped in parenthesis after a function's name but before the `{` that starts the definition to denote the return type
+- can denote multiple return types if you include the types with comma separators
+- e.g. `func name(args) (type1, type2, type3)` denotes that the function returns 3 values with types `type1` `type2` and `type3`
+- the return line has each value separated by commas: `return valueOfType1, valueOfType2, valueOfType3`
+- can store the returned values in their own variables also by using a comma syntax: `var1, var2, var3 := name(args)`
+
+# Byte Slices
+-
