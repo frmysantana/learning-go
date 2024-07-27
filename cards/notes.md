@@ -63,4 +63,13 @@ func functionName() returnType {
 - can store the returned values in their own variables also by using a comma syntax: `var1, var2, var3 := name(args)`
 
 # Byte Slices
--
+- goal is to save the deck onto the machine - saveToFile
+- when looking to do low-level stuff, look at the go docs to see if there is already an implementation
+- writeFile is appropriate for this case
+- in order to use this function, we need to convert deck (which is a slice of strings) into a slice of bytes (commonly called a `byte slice` in the go world)
+- byte slice is a slice of ascii digits that represent the string of your data
+
+# Deck to String
+- go can do some type conversion for you: `<type_you_want>(<value_you_currently_have>)`
+- so to go from deck (which is a slice of strings) to a byte slice:
+	- deck -> one long string -> byte slice
