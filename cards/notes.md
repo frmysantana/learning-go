@@ -73,3 +73,13 @@ func functionName() returnType {
 - go can do some type conversion for you: `<type_you_want>(<value_you_currently_have>)`
 - so to go from deck (which is a slice of strings) to a byte slice:
 	- deck -> one long string -> byte slice
+
+# Joining a Slice of Strings
+- import multiple packages with:
+```
+import (
+	"package1"
+	"package2"
+)
+```
+- go's string join functionality is `strings.Join()` from the `strings` package
