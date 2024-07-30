@@ -83,3 +83,14 @@ import (
 )
 ```
 - go's string join functionality is `strings.Join()` from the `strings` package
+
+# Saving Data to the Hard Drive
+- use the ioutils package for it's WriteFile function
+
+# Reading From the Hard Drive
+- use `ReadFile` from ioutils
+- may return an error, which is of type error if it has a value or `nil` (this is Go's version of `null`) if there were no errors
+- when figuring out how to handle errors in go, ask yourself what would you like the program to do if you were the user?
+
+# Error Handling 
+- can split strings with `Split` function from `strings` package
