@@ -94,3 +94,9 @@ import (
 
 # Error Handling 
 - can split strings with `Split` function from `strings` package
+
+# Shuffling a Deck
+- Go's math functionality is in it's math package
+- when doing a for loop and not needing the 2nd output of `range`, you don't have to assign it to anything
+- can do multiple assignments in the same line with comma syntax:
+	- `var1, var2, ... = val1, val2, ...`
