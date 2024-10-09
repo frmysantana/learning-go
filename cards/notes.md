@@ -111,6 +111,8 @@ import (
 - before you can run tests, you have to make a `go.mod` file using the command `go mod init <directory_name>` from inside the directory that you want to write tests for. After the file is made, you can use the `run test function` inside VSCode or run `go test` from the terminal.
 
 # Testing With Go
+- go has a small set of functions to test its code (not as complex as stuff like Mocha, Selenium, etc.)
+- tests should be put into a file named `<other_file_in_the_same_dir_you_want_to_test>_test.go`
 
 # Errorf call has arguments but no formatting directives
 
