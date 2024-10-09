@@ -100,3 +100,18 @@ import (
 - when doing a for loop and not needing the 2nd output of `range`, you don't have to assign it to anything
 - can do multiple assignments in the same line with comma syntax:
 	- `var1, var2, ... = val1, val2, ...`
+
+# Random Number Generation
+- the `rand.Intn()` function from the last lesson is only pseudo-random so there may be times where the output is the same
+- `Intn()` uses the same seed for it's random generation
+- a better way to get more randomness is to use the time package to convert the current time into an `int64` number (using `time.Now().UnixNano()`) which is then used as a seed for `rand.NewSource` which can be used to make a new random object with `rand.New` which then has access to a receiving function that can give a unique random number with `Intn`
+- learning to navigate the Go docs is essential to actually learn Go
+
+# Creating a go.mod file
+- before you can run tests, you have to make a `go.mod` file using the command `go mod init <directory_name>` from inside the directory that you want to write tests for. After the file is made, you can use the `run test function` inside VSCode or run `go test` from the terminal.
+
+# Testing With Go
+
+# Errorf call has arguments but no formatting directives
+
+# Writing Useful Tests
