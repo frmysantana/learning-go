@@ -113,7 +113,18 @@ import (
 # Testing With Go
 - go has a small set of functions to test its code (not as complex as stuff like Mocha, Selenium, etc.)
 - tests should be put into a file named `<other_file_in_the_same_dir_you_want_to_test>_test.go`
+- run `go test` on the command line to run the tests
 
 # Errorf call has arguments but no formatting directives
+- a note about how the API has changed since the course was launched
+- instead of `t.Errorf("Expected deck length of 16, but got", len(d))`, use `t.Errorf("Expected deck length of 16, but got %v", len(d))`
 
 # Writing Useful Tests
+- deciding what to test - test whatever you think is likely to break if a new dev comes in and starts making changes
+- "what do I really care about?" regarding the a specific file/function
+- when testing a function, it should be called `Test<original_function_name>`
+- test functions need to have capital `Test` as their starting name and need argument `t` of type `*testing.T`
+	- e.g. `func TestNewDeck(t *testing.T) {`
+
+# Asserting Elements in a Slice
+- using the basic array-index access syntax to set up tests regarding the expected first and last card
