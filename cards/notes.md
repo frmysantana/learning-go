@@ -1,3 +1,7 @@
+# Basics
+- every golang program needs a file called "main.go" that has a function called "main"
+- execute the program by running `go run main.go` in the CLI
+
 # Variable Declarations
 
 -use keyword 'var' to declare a variable
@@ -128,3 +132,15 @@ import (
 
 # Asserting Elements in a Slice
 - using the basic array-index access syntax to set up tests regarding the expected first and last card
+
+# Testing file IO
+- have to remember to manually clean up any files that are made while testing in case there is a crash of some sort
+- go testing framework doesn't do any sort of cleanup after tests
+- will do this by first deleting any files with name "_decktesting" (this cleans in case there was a crash/failure), then going through the happy path of the test and ending by again deleting any files named "_decktesting"
+- stephen recommends the "Test<PascalCasedVersionOfFunctionName(s)YourTesting>" so that it is easier to find the corresponding test to make updates if you change the original function
+- when checking errors, have to ensure that either you strip the error type and look at just the message (using <error>.Error()), or you compare the error with another error type 
+	- can use errors package and the Is method: (e.g. `knownError := errors.New('error message that is expected') /.../ errors.Is(compileError, knownError)`)
+	- or can use direct equality (`compileError == knownError`)
+
+# Project Review
+- 
