@@ -144,3 +144,12 @@ import (
 
 # Project Review
 - 
+
+# Structs in Go
+- a Struct is a data structure in Go that are a collection of properties (kind of like an object in JS)
+- to use them, first have to define it's properties and then create a value that is of that type"
+`type <struct_name> struct {
+	prop1 typeOfProp1
+	prop2 typeOfProp2
+	...
+} `
