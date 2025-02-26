@@ -147,9 +147,25 @@ import (
 
 # Structs in Go
 - a Struct is a data structure in Go that are a collection of properties (kind of like an object in JS)
+
+# Defining Structs
 - to use them, first have to define it's properties and then create a value that is of that type"
 `type <struct_name> struct {
 	prop1 typeOfProp1
 	prop2 typeOfProp2
 	...
 } `
+
+# Declaring Structs
+- 3 ways to declare
+- 1: declare the type, use braces, and type values in the order that you want go to interpret for the fields - not recommended because a change in the order of the struct would require all declarations to be re-factores
+	- e.g.: struct definition:  `type person struct {
+									firstName string
+									lastName  string
+								}`
+	- declaration: alex := person{"Alex", "Anderson"}
+- 2: explicitly use the field name in the declaration - better; now a change in the struct definition order doesn't need a refactor
+	- e.g.: alex := person{firstName: "Alex", lastName: "Anderson"}
+- 3: TBD
+
+# Updating Struct Values
